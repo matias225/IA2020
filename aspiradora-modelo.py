@@ -64,11 +64,6 @@ class Aspiradora:
         print('Limpie \n')
 
 
-    def revisar_suciedad(self):
-        self.movimientos += 1
-        print('Limpie \n')
-
-
     def mostrar_aspiradora(self):
         cadena=''
         for i in range(0, len(pasillo)):
@@ -107,6 +102,7 @@ if __name__ == '__main__':
         aspiradora.mostrar_aspiradora()
         if aspiradora.giros == 2:
             print("Ya recorri todo el piso. Apagando...")
+            print('Cantidad de movimientos totales:', aspiradora.movimientos)   
             break
         aspiradora.avanzar()
     
